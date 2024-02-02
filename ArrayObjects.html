@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List</title>
+</head>
+<body>
+  <section class="oculus" id="productSection">
+    <!-- Product items will be generated here -->
+  </section>
+
+  <script>
+    // Your data array
+    let data = [
+      {
+        img: 'C:\Users\Sunke Shiva\OneDrive\Desktop\shiva\bike.jpg',
+        title: 'Oculus Quest',
+        content: 'All-in-one gaming headset with lightweight, flexible design',
+        price: '399'
+      },
+      {
+        img: 'C:\Users\Sunke Shiva\OneDrive\Desktop\shiva\cloths.jpg',
+        title: 'Oculus Quest',
+        content: 'All-in-one gaming headset with lightweight, flexible design',
+        price: '399'
+      },
+      {
+        img: 'C:\Users\Sunke Shiva\OneDrive\Desktop\shiva\cloths.jpg',
+        title: 'Oculus Quest',
+        content: 'All-in-one gaming headset with lightweight, flexible design',
+        price: '399'
+      }
+    ];
+
+    // Get the container where the products will be added
+    const productSection = document.getElementById('productSection');
+
+    // Loop through the data and generate HTML for each product
+    data.forEach(product => {
+      const productDiv = document.createElement('div');
+      productDiv.innerHTML = `
+        <div>
+          <img src="${product.img}" alt="">
+          <div class="quest">
+            <h4>${product.title}</h4>
+            <p class="para">${product.content}</p>
+            <p class="price">$&nbsp;${product.price} <span class="cart"><i class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;Add to cart</span></p>
+          </div>
+        </div>
+      `;
+
+      productSection.appendChild(productDiv);
+    });
+  </script>
+</body>
+</html>

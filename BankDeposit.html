@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Details</title>
+    <style>
+        .accdetails {
+            width: 20vw;
+            height: auto;
+            padding: 10px;
+        }
+        div{
+            border:2px solid black;
+            width:25vw;
+            height:auto;
+            padding:10px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Welcome Shiva</h2>
+        <hr>
+        <form id="Account" class="accdetails">
+            <span> Your Balance :</span>
+            <input type="number" id="balance" placeholder="Total Balance">
+            <span>Transfer :</span>
+            <input type="number" id="transbal">
+            <input type="button" id="trnsf" value="transfer">
+            <span>Total loan :</span>
+            <input type="number" id="totalloan">
+            <input type="button" id="subbtn" value="submit">
+            
+        </form>
+        <p id="money"></p>
+    </div>
+    <script>
+        function Account(balance){
+            this.balance=balance;
+
+            this.transfer=(amount)=>{
+                this.balance -= amount
+            }
+
+            this.loan=(amount)=>{
+                this.balance += amount;
+
+            }
+
+        }
+
+        let account=document.querySelector('#Account');
+        let bal=(document.querySelector('#balance'));
+        let transbal=(document.querySelector('#transbal'));
+        let takingloan=document.querySelector('#totalloan')
+        let transfbutton=document.querySelector('#trnsf');
+      
+        transfbutton.addEventListener('click',(e)=>{
+            e.preventDefault();
+
+            let accountobj=new Account(+bal.value);
+            accountobj.transfer(+transbal.value);
+            document.querySelector('#balance').value=accountobj.balance
+
+        })
+        
+        let takeloan=document.querySelector('#subbtn');
+
+        takeloan.addEventListener('click',(e)=>{
+            e.preventDefault();
+
+            let accountobj2=new Account(+bal.value);
+            accountobj2.loan(+takingloan.value);
+            console.log(accountobj2);
+            document.querySelector('#balance').value=accountobj2.balance
+        
+        })
+
+    </script>
+</body>
+
+</html>

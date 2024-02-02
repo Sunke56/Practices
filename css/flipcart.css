@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+
+.section{
+    border: 1px solid silver; 
+    margin:10px; 
+    box-shadow:10px 10px 10px silver; 
+    height:20%;
+    padding:20px;
+    box-sizing: border-box;
+    display: grid; 
+    grid-template-columns: repeat(10,1fr); 
+    /* background-color: rgb(200, 245, 247); */
+} 
+section a{
+    text-decoration:none;
+    color:black
+}
+section  a:hover{
+    color:blue
+}
+.img1{
+    height:70px;
+    width:50px;
+    margin-left: 40px;
+
+}
+  a .img1:hover{
+    height: 100px;
+    width: 75px;
+}  
+ p{
+    margin-left: 40px;
+} 
+.select{
+    background-color: blue;
+}
+ header{
+    display:grid;
+    grid-template-columns:10% 50% 10% 10% 10% 10%; 
+    padding-bottom:40px;
+    background-color: rgb(20, 20, 200);
+    padding:50px;
+    border-radius: 5px;
+    margin: 20px;
+ }
+
+.a2{
+
+    text-decoration: none;
+    color:white;
+} 
+.polo{
+    width: 60px;
+    height: 30px;
+} 
+.pad1{
+    padding-right: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(171, 238, 238);
+    
+}
+.pad2{
+    padding-left:20px;
+    text-decoration: none;
+    color:white;
+}
+.pad3{
+    margin-left: 30px;
+}
+
+span{
+    color:orangered
+}
+ @media only screen and (max-width:1100px) and (min-width:750px){
+    .section{
+        display:grid;
+        grid-template-columns: repeat(5,1fr);
+        background-color: chocolate;
+    }
+}
+    @media only screen and (max-width:750px) and (min-width:500px){
+    .section{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        background-color: gold;
+    }
+}
+       
+    @media only screen and (max-width:500px) and (min-width:350px){
+    .section{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        background-color: rgb(30, 210, 33);
+        align-items: center;
+    }
+}
+    @media only screen and (max-width:350px) {
+    .section{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+
+    }
+}
+
+
+   
+

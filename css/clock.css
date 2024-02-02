@@ -1,0 +1,128 @@
+.sec1{
+    width:150px;
+    height:150px;
+    border:1px solid black;
+    border-radius: 50%;
+}
+.span1{
+    position:relative;
+    top:3px;
+    left:65px;
+}
+.span2{
+    position:relative;
+    top:87%;
+    left:50px;
+}
+.span3{
+    position: relative;
+    top:45%;
+    right:23px;
+}
+.span4{
+    position:relative;
+    top:42%;
+    left:62%;
+}
+.span5{
+    position:relative;
+    top:13px;
+    left:30%;
+}
+.span6{
+    position:relative;
+    top:13px;
+    right:24%;
+}
+.span7{
+    position:relative;
+    top:32px;
+    left:25%;
+}
+.span8{
+    position:relative;
+    top:35px;
+    right:57%;
+}
+.span9{
+    position:relative;
+    top:100px;
+    left:5px;
+    
+}
+.span10{
+    position:relative;
+    top:100px;
+    right:75%;
+}
+.span11{
+    position:relative;
+    top:102px;
+    left:67%;
+}
+.span12{
+    position:relative;
+    top:102px;
+    left:20%;
+}
+.span13{
+    width:5px;
+    height:5px;
+    border-radius: 50%;
+    border:1px solid black;
+    position:absolute;
+    top:78px;
+    left:5.2%;
+    background-color: black;
+}
+.span14{
+    border:1px solid black;
+    height:50px;
+    position: absolute;
+    top:30px;
+    left:5.35%;
+    transform: rotate();
+}
+.span15{
+    border:1px solid black;
+    height:30px;
+    position: absolute;
+    top:57px;
+    left:4.25%;
+    transform: rotate(120deg);
+}
+.span16{
+    border:1px dotted black;
+    position: absolute;
+    top:80.5px;
+    width:40px;
+    left:5.35%;
+}
+/* .span16{
+    animation-name: rotateELE;
+    animation-duration: 60s;
+    
+}
+.span15{
+    animation-name: rotateELE;
+    animation-duration: 3600s;
+}
+.span14{
+    animation-name: rotateELE;
+    animation-duration: 360000s;
+}
+@keyframes rotateELE{
+    from{
+        transform: rotate(0deg);
+        
+
+    }
+   to{ 
+        transform: rotate(360deg);
+        
+    }
+
+}
+
+    
+ */

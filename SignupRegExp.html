@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User Signup</title>
+    <style>
+        input {
+            width: 30vw;
+            height: 4vh;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 7px;
+            margin: 8px
+        }
+        #btn{
+            width:8vw;
+            height:5vh;
+            border-radius: 10px;
+            
+        }
+
+        h2,
+        form {
+            text-align: center;
+        }
+
+        p {
+            font-size: 15px;
+            text-align: center;
+        }
+
+        #uErr,#eErr,#pErr,#tErr {
+            color: orange;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>New User Signup</h2>
+    <form >
+        
+            <input type="text" id="name" name="name" placeholder="username"><br><br>
+            <p id="uErr">Enter correct user name</p>
+    
+        
+            <input type="email" id="mail" name="mail" placeholder="email"><br><br>
+            <p id="eErr">Enter correct user name</p>
+        
+            <input type="password" id="pw" name="pw" placeholder="password"><br><br>
+            <p id="pErr">Enter correct user name</p>
+       
+            <input type="text" id="pnno" name="pnno" placeholder="telephone"><br><br>
+            <p id="tErr">Enter correct user name</p>
+       
+            <input type="button" id="btn" value="sumbit">
+    </form>
+    <script>
+        var sub = document.getElementById('btn').addEventListener('click', () => {
+
+            let a = document.getElementById('name').value;
+            let b = document.getElementById('mail').value;
+            let c = document.getElementById('pw').value;
+            let d = document.getElementById('pnno').value;
+
+            var reg1 = /[A-Za-z0-9_-]{5,12}$/
+            var reg2 = /[A-Za-z0-9_.-]+@[A-Za-z0-9_.-]+$/
+            var reg3 = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*_+-])[a-zA-Z\d!@#$%^&*_+-]{8,20}$/;
+            var reg4 = /^[6-9]\d{9}$/
+            if (!reg1.test(a)) {
+                document.getElementById('uErr').style.display = 'block';
+                document.getElementById('name').style.border = '1px solid orange';
+            }
+            else {
+                document.getElementById('uErr').style.display = 'none';
+                document.getElementById('name').style.border = '1px solid green';
+            }
+
+            if (!reg2.test(b)) {
+                document.getElementById('eErr').style.display = 'block';
+                document.getElementById('mail').style.border = '1px solid orange';
+            }
+            else {
+                document.getElementById('eErr').style.display = 'none';
+                document.getElementById('mail').style.border = '1px solid green';
+            }
+
+            if (!reg3.test(c)) {
+                document.getElementById('pErr').style.display = 'block';
+                document.getElementById('pw').style.border = '1px solid orange';
+            }
+            else {
+                document.getElementById('pErr').style.display = 'none';
+                document.getElementById('pw').style.border = '1px solid green';
+            }
+
+            if (!reg4.test(d)) {
+                document.getElementById('tErr').style.display = 'block';
+                document.getElementById('pnno').style.border = '1px solid orange';
+            }
+            else {
+                document.getElementById('tErr').style.display = 'none';
+                document.getElementById('pnno').style.border = '1px solid green';
+            }
+        })
+
+    </script>
+
+
+</body>
+
+</html>

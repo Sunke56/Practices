@@ -1,0 +1,101 @@
+body {
+    background-color: black;
+}
+
+.sec1 {
+    height: 100px;
+    width: auto;
+    position: relative;
+
+
+}
+
+.btn1 {
+    width: 10vw;
+    height: 8vh;
+    font-size: 02vw;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+
+.para1 {
+    position: absolute;
+    right: 80px;
+    font-size: 20px;
+
+    color: whitesmoke
+}
+
+.sec2 {
+    text-align: center;
+    height: 100px;
+}
+
+.head1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: whitesmoke
+}
+
+.sec3 {
+    position: relative;
+}
+
+.line {
+    height: 3px;
+    width: 100%;
+    background-color: whitesmoke;
+
+}
+
+#box {
+    width: 6vw;
+    height: 12vh;
+    position: relative;
+    background-color: whitesmoke;
+    top: -100px;
+    left: 46%;
+    font-size: 58px;
+    text-align: center;
+
+}
+
+#box2 {
+    width: 11vw;
+    height: 10vh;
+    border: 1px solid whitesmoke;
+    font-size: 58px;
+    text-align: center;
+}
+
+#btn2 {
+    width: 10vw;
+    height: 8vh;
+    font-size: 02vw;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+
+.sec4 {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+  
+}
+
+.division {
+    flex: 1;
+}
+
+.localdiv {
+    margin-left: 200px;
+}
+
+.div1 {
+    height: 10vh;
+}
+
+.num {
+    font-size: 20px;
+    color: whitesmoke
+}

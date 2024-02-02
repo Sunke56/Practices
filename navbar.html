@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navgation</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing:border-box ;
+            }
+
+            .nav1{
+                display:grid;
+                grid-template-columns: repeat(6,1fr);
+                border:1px solid silver;
+                background-color: rgb(26, 22, 22);
+                border-radius: 5px; 
+                padding: 3px;
+                margin-top: 50px;
+                position: sticky;
+                top:10px;
+            }
+            a{
+                text-decoration: none;
+                color:white;
+            }
+            body{
+                height: 1000px;
+            }
+           
+        </style>
+
+    </head>
+    <body>
+        <nav class="nav1">
+            <div><a href="#">HTML</a></div>
+            <div><a href="#">CSS</a></div>
+            <div><a href="#">JS</a></div>
+            <div><a href="#">REACT</a></div>
+            <div><a href="#">BOOTSTRAP</a></div>
+            <div><a href="#">JAVA</a></div>
+        </nav>
+    </body>
+</html>

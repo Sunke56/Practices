@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <label for="pass">Enter pasword :</label>
+    <input type="text" name="pass" id="pass" placeholder="Enter Password">
+    <button onclick="password()">submit</button>
+    <p id="txt"></p>
+    <script>
+      function password(){
+        const reg=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*!@#$%^&*_-+)[a-zA-Z\d!@#$%^&*_+-]{8,}$/
+        let x=document.getElementById('pass').value;
+
+        if(!reg.test(x)){
+            document.getElementById('txt').innerHTML='Invalid password'
+        }
+        else{
+            document.getElementById('txt').innerHTML='valid password;'
+        }
+    }
+   
+    </script>
+</body>
+</html>

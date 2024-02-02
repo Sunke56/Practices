@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Detais</title>
+</head>
+
+<body>
+    <form id="AccountForm">
+        <input type="text" placeholder="Customer name" id="CustomerName">
+        <input type="number" placeholder="Initial Balance" id="balance">
+        <button id="">create Account</button>
+    </form>
+
+    <form id="DipositForm">
+        <input type="number" placeholder="Account Number" id="accountnumber">
+        <input type="number" placeholder="Amount" id="amount">
+        <button>create Account</button>
+    </form>
+
+
+
+
+    <script>
+        function BankAccount(customername, balance = 0) {
+            this.name = customername;
+            this.AccountNumber = Date.now();
+            this.balance = balance;
+
+            this.deposit = function (amount) {
+                this.balance += amount;
+            }
+
+            this.withdraw = (amount) => {
+                this.balance -= amount;
+            }
+
+
+        }
+        // const shivaDetails=new BankAccount('shiva',1000);
+        // const raviDetails=new BankAccount('Ravi')
+
+        // raviDetails.balance=10000;
+
+        // console.log(shivaDetails);
+        // console.log(raviDetails);
+        // shivaDetails.deposit(1000);
+        // console.log(shivaDetails);
+        // raviDetails.withdraw(1000);
+        // console.log(raviDetails);
+        const Account = [];
+        const accountform = document.querySelector('#AccountForm');
+        const customername = document.querySelector('#CustomerName');
+        const balance = document.querySelector('#balance');
+
+        accountform.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const accountdatails = new BankAccount(customername.value, +balance.value);
+            Account.push(accountdatails);
+            console.log(Account);
+        })
+
+        const DipositForm = document.querySelector('#DipositForm');
+        const AccountNumber = document.querySelector('#accountnumber');
+        const Amount = document.querySelector('#amount');
+
+        DipositForm.addEventListener('submit',(e)=>{
+           e.preventDefault();
+           const account= Account.find(
+            (account)=>account.AccountNumber === +AccountNumber.value);
+           
+           account.deposit(+amount.value);
+           
+           console.log(Account)
+            
+
+            
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}  */
+section{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+div{
+    flex:1;
+}
+
+section,div{
+    border:1px solid silver;
+    padding:5px;
+
+}
+.polo{
+    flex-grow: 5;
+
+}
+.polo2{
+    flex-basis: 50px;
+    
+}
+.polo3{
+    flex-shrink: 6px;
+}

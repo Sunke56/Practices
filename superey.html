@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Keyword</title>
+</head>
+<body>
+    <script>
+
+    //------------------super keyword--------------------------
+
+    //     class Revi{
+    //         constructor(name,age){
+    //             this.name=name;
+    //             this.age=age;
+    //         }
+    //         play(){
+    //             console.log(this.name +" has play cricket");
+    //         }
+    //         vote(){
+    //             console.log(this.name +" had vote because of his age is "+this.age)
+    //         }
+    //     }
+    //     class Employee extends Revi{
+    //         constructor(name,age){
+    //             super(name,age);
+    //         }
+    //     play(){
+    //     return this.name+" has paly volleyball"
+            
+    //     }
+    // }
+    //     const Ravivarma=new Employee('ravi',20);
+    //     console.log(Ravivarma.play());
+    //     Ravivarma.vote();
+
+// --------------Destructring-------------------------------
+// which means :- which unpack the Elements of arry and properties of object as asingle unit.
+
+    let arr=[1,2,3,4,5];
+    let [a,b,c,d,e]=arr;
+    document.write(a);
+    document.write(b);
+      
+    let obj={
+        name:'shiva',
+        age:23
+    }
+    // let name=obj.name;
+    // let age=obj.age;
+    let{name,age}=obj
+    console.log(name,age);
+    </script>  
+</body>
+</html>

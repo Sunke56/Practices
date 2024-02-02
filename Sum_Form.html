@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="fnum" placeholder="Enter First Number"><br><br>
+    <select  id="opt">
+        <option value="add">+</option>
+        <option value="dif">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+        <option value="mod">%</option>
+    </select><br><br>
+    <input type="text" id="lnum" placeholder="Enter another Number"><br><br>
+    <button>calculate</button><br><br>
+    <p id="ans"></p>
+    <script>
+        var x=document.querySelector('button');
+        x.addEventListener('click',()=>{
+            var a=parseInt(document.getElementById('fnum').value);
+            var b=parseInt(document.getElementById('lnum').value);
+            var p=document.getElementById('opt').value;
+            let z;
+            if(isNaN(a) || isNaN(b)){
+                document.getElementById('ans').innerHTML='invalid'
+                return;
+            }
+            // switch(p){
+            //     case 'add':
+            //         z=a + b;
+            //         break;
+
+            //     case 'dif':
+            //         z=a - b;
+            //         break;
+
+            //     case 'mul':
+            //         z=a * b;
+            //         break;
+
+            //     case 'div':
+            //         if(b!== 0){
+            //             z=a / b;}
+            //         else {
+            //             document.getElementById('ans').innerHTML='divisible by zero';
+            //             return;
+            //         }break;
+
+            //     case 'mod':
+            //         z=a % b;
+            //         break;
+                    
+            //     default:
+            //         z='invalid'
+            //         break;
+            // }
+            // document.getElementById('ans').innerHTML='Ans is:'+z
+            else if(p==='add'){
+                z=a+b;
+                document.getElementById('ans').innerHTML=`The Sum of ${a} and ${b} is ${z}`;
+                return;
+            }
+            else if(p==='dif'){
+                z=a-b;
+                document.getElementById('ans').innerHTML=`The Differance of ${a} and ${b} is ${z}`;
+                return;
+            }
+            else if(p==='mul'){
+                z=a*b;
+                document.getElementById('ans').innerHTML=`The Multiplication of ${a} and ${b} is ${z}`;
+                return;
+            }
+            else if(p==='div'){
+                if(b!==0){
+                    z=a/b;
+                    document.getElementById('ans').innerHTML=`The Division of ${a} and ${b} is ${z}`;
+                    return;
+                }
+                else {
+                    document.getElementById('ans').innerHTML='invalid';
+                }
+                
+            }
+            
+            else {
+                z=a%b;
+                document.getElementById('ans').innerHTML=`The Modulous of ${a} and ${b} is ${z}`;
+                return;
+            }
+            
+
+        })
+    </script>
+
+</body>
+</html>

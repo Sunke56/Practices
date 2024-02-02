@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Container</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+      .sec{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height:300px;
+        width:100%;
+        border:1px solid black;
+      }
+      .div{
+        flex:1;
+        flex-direction: row;
+        height:200px;
+        background-image:url(./download.png);
+        background-size:cover ;
+        border:1px solid red;
+        margin:10px;
+
+      }
+    </style>
+</head>
+<body>
+    <section class="sec">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+    </section>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    <!-- <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        section{
+            width:100%;
+            height:200px;
+            background: linear-gradient(to bottom,blue,green);
+        }
+    </style> -->
+</head>
+<body>
+    <script>
+        //function with parameters:
+        // function m(a,b){
+        //     console.log(a*b)
+        // }
+        // m(2,5);
+
+        //variable function:
+        // var xmt=function(){
+        //     console.log("Hello Good Morning!")
+        // }
+        // xmt();
+       
+        // anonymous function:
+        // setTimeout(function(){
+        //     console.log("Good Morning!");
+        // },2000);
+
+        //callback function:
+        function adds(a,b){
+        return a+b;
+        }
+        function muls(a,b,callback){
+            return a*b;
+            callback()
+        }
+        muls(2,5,adds);
+
+
+    </script>
+    
+</body>
+</html>

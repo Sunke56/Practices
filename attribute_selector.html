@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            a[target="_self"]
+            {
+                color:blue
+            }
+            a[href="https://www.google.com"]
+            {
+                color:red;
+            }
+            a[href$=".org"]
+            {
+                background-color: darkolivegreen;
+            }
+            a[href*="tu" i]
+            {
+                color:brown
+            }
+            a[href^="#"]
+            {
+                background-color: black;
+                color:aliceblue
+            }
+            [alt~="Tajmahal"]
+            {
+                border: 2px solid blue;
+            }
+            
+        </style>
+
+    </head>
+    <body>
+        <a href="https://www.google.com" target="_self">google</a><br>
+        <a href="https://www.youtube.com">youtube</a><br>
+        <a href="https://www.instagram.com">instagram</a><br>
+        <a href="https://www.wikipedia.org">wikipedia</a><br>
+        <a href="https://www.pinterest.com">pinterest</a><br>
+        <a href="#interest">interest</a><br>
+        <img src="./images.jpg" alt="Tajmahal" title="Tajmahal">
+    
+    </body>
+</html>

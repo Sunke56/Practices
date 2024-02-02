@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Table</title>
+</head>
+<body>
+    <script>
+        var a=document.createElement('table');
+        a.setAttribute("border","1");
+        var b=document.createElement('tr');
+        var c=document.createElement('th');
+        var d=document.createElement('th');
+        var e=document.createElement('th');
+        d.appendChild(document.createTextNode("S.NO"));
+        c.appendChild(document.createTextNode("NAME"));
+        e.appendChild(document.createTextNode("DEGREE"));
+        b.appendChild(c);
+        b.appendChild(d);
+        b.appendChild(e);
+        
+        var B=document.createElement('tr');
+        var C=document.createElement('td');
+        var D=document.createElement('td');
+        var E=document.createElement('td');
+        C.appendChild(document.createTextNode("1"));
+        D.appendChild(document.createTextNode("Shiva"));
+        E.appendChild(document.createTextNode("B.Tech"));
+        B.appendChild(C);
+        B.appendChild(D);
+        B.appendChild(E);
+
+        var s=document.createElement('tr');
+        var t=document.createElement('td');
+        var u=document.createElement('td');
+        var v=document.createElement('td');
+        t.appendChild(document.createTextNode("2"));
+        u.appendChild(document.createTextNode("Ravi"));
+        v.appendChild(document.createTextNode("B.Com"));
+        s.appendChild(t);
+        s.appendChild(u);
+        s.appendChild(v);
+
+
+        var S=document.createElement('tr');
+        var T=document.createElement('td');
+        var U=document.createElement('td');
+        var V=document.createElement('td');
+        T.appendChild(document.createTextNode("3"));
+        U.appendChild(document.createTextNode("Bhargav"));
+        V.appendChild(document.createTextNode("B.Sc"));
+        S.appendChild(T);
+        S.appendChild(U);
+        S.appendChild(V);
+
+        a.appendChild(b);
+        a.appendChild(B);
+        a.appendChild(s);
+        a.appendChild(S);
+        
+        var A=document.querySelector('body').appendChild(a);    
+        console.log(A);
+        
+    </script>
+</body>
+</html>

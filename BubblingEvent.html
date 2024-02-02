@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first{
+            border:1px solid black;
+            padding:10px;
+            text-align: center;
+            width:300px;
+            background-color: chartreuse;
+        }
+        #second{
+            border:1px solid red;
+            padding:10px;
+            text-align: center;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">sunke
+        <div id="second">sunke</div>
+    </div>
+    <script>
+        var a=document.getElementById('first').addEventListener('click',()=>{
+           
+            alert("this is the first division")
+        })
+        var b=document.getElementById('second').addEventListener('click',function(h){
+             h.stopImmediatePropagation();
+            alert("this is second division")
+        })
+        var b=document.getElementById('second').addEventListener('click',function(e){
+             e.stopPropagation();
+           alert(`this.style.backgroundColor="red"`)
+        })
+    </script>
+</body>
+</html>

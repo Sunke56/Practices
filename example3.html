@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop</title>
+    <style>
+        .class1{
+            color:red;
+            background-color: blue;
+            border:1px solid black;
+            padding:5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="dev">HTML</div>
+    <section>CSS</section>
+    <div>JS</div>
+    <section>REACT</section>
+    <script>
+    var x=document.querySelectorAll('section');
+    for(i of x){
+        x[i].classList.add('class1')
+        console.log(x[i]);
+    }
+    // x.classList.add('class1')
+    //     console.log(x);
+       
+    </script>
+</body>
+</html>
